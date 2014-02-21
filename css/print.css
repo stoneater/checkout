@@ -1,0 +1,25 @@
+table{
+	border:medium gray;
+	border-style: solid;
+	border-collapse: collapse;
+}
+
+ul li{
+	color: #000000;
+}
+
+td{
+	border:medium black;
+	border-style:none none solid none;
+	border-collapse:collapse;
+}
+h1{ 
+	color:#004400;
+	text-align:center;
+}
+
+hr
+{
+	border-color:#888888;
+	box-shadow:2px 2px 1px #888888;
+}

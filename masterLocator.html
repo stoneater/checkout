@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<link rel="SHORTCUT ICON" href="favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+$(function() {
+  $( "#datepicker" ).datepicker({ minDate: 0, maxDate: 14, onSelect: function (dateText, inst) {$(this).parent('form').submit() }});
+});
+</script>
+</head>
+<body>
+<form action="masterLocator.php" method="post">
+	<div>What day do you need pick sheets for?</div>
+	<input type="text" id="datepicker" name="day" required>
+</form>
+</body>
+</html>

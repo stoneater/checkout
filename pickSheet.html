@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<link rel="SHORTCUT ICON" href="favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+$(function() {
+  $( "#datepicker" ).datepicker({ minDate: 0, maxDate: 14 });
+});
+</script>
+</head>
+<body>
+<form action="pickSheet.php" method="post">
+	<div>What day do you need pick sheets for?</div>
+	<input type="text" id="datepicker" name="day" required><br><br>
+	<div>Please choose which blocks you want:(A/B)</div>
+	<input value="1" id="first" name="block" type="radio"><label for="first">I want to see block 1/5</label><br>
+	<input value="2" id="second" name="block" type="radio"><label for="second">I want to see block 2/6</label><br>
+	<input value="3" id="third" name="block" type="radio"><label for="third">I want to see block 3/7</label><br>
+	<input value="4" id="fourth" name="block" type="radio"><label for="fourth">I want to see block 4/8</label><br>
+	<hr>
+	<!-- 
+	<input value="1" name="charge" type="checkbox"> I want to see charging computers for selected block.<br> 
+	-->
+	<br><br>
+	<input type="submit" value="Submit Request">
+</form>
+</body>
+</html>

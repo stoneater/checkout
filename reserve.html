@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<link rel="SHORTCUT ICON" href="favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+$(function() {
+  $( "#datepicker" ).datepicker({ minDate: 0, maxDate: 14 });
+});
+</script>
+</head>
+<body>
+<form action="selections.php" method="post">
+	<div>What is your name?</div>
+	<input type="text" name="name" required autofocus>
+	<div>What is your email address?</div>
+	<input type="email" name="email" required>
+	<div>What is your room number</div>
+	<select name="room" required>
+		<option value="10">10</option>
+		<option value="100">100</option>
+		<option value="102">102</option>
+		<option value="104">104</option>
+		<option value="105">105</option>
+		<option value="107">107</option>
+		<option value="108">108</option>
+		<option value="110">110</option>
+		<option value="112">112</option>
+		<option value="113">113</option>
+		<option value="114">114</option>
+		<option value="115">115</option>
+		<option value="116">116</option>
+		<option value="117">117</option>
+		<option value="119">119</option>
+		<option value="12">12</option>
+		<option value="120">120</option>
+		<option value="121">121</option>
+		<option value="123">123</option>
+		<option value="201">201</option>
+		<option value="202">202</option>
+		<option value="203">203</option>
+		<option value="204">204</option>
+		<option value="205">205</option>
+		<option value="206">206</option>
+		<option value="207">207</option>
+		<option value="208">208</option>
+		<option value="209">209</option>
+		<option value="210">210</option>
+		<option value="211">211</option>
+		<option value="212">212</option>
+		<option value="213">213</option>
+		<option value="214">214</option>
+		<option value="215">215</option>
+		<option value="216">216</option>
+		<option value="217">217</option>
+		<option value="218">218</option>
+		<option value="219">219</option>
+		<option value="220">220</option>
+		<option value="221">221</option>
+		<option value="223">223</option>
+		<option value="225">225</option>
+		<option value="301">301</option>
+		<option value="302">302</option>
+		<option value="303">303</option>
+		<option value="67">67</option>		
+		<option value="78">78</option>
+		<option value="81">81</option>
+		<option value="Cafeteria">Cafeteria</option>
+		<option value="Counselor">Counselor</option>
+		<option value="Gym">Gym</option>
+		<option value="Media">Media</option>
+		<option value="Nurse">Nurse</option>
+		<option value="Office">Office</option>
+	</select>	
+	<div>What day do you want the computers?</div>
+	<!-- <input type="number" name="day" min="0" max="14" value="0"><br><br> -->
+	<input type="text" id="datepicker" name="day" required><br><br>
+	<div>Please choose which blocks you want:(A/B)</div>
+	<input type="checkbox" name="blocksRequested[0]" value="1"> I want block 1/5<br>
+	<input type="checkbox" name="blocksRequested[1]" value="1"> I want block 2/6<br>
+	<input type="checkbox" name="blocksRequested[2]" value="1"> I want block 3/7<br>
+	<input type="checkbox" name="blocksRequested[3]" value="1"> I want block 4/8<br>
+	<br><br>
+	<div>And how many computers do you require?</div>
+	<!-- Quantity (up to 32) <input type="number" name="computersRequested" min="1" max="32"><br> -->
+	Quantity (unlimited) <input type="number" name="computersRequested" min="1" value="1"><br>
+	<input type="submit" value="Submit Request">
+</form>
+
+</body>
+</html>

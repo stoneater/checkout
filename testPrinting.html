@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Linux Powered Test Code</title>
+
+
+<link rel="stylesheet" href="css/style.css" >
+<script>
+function iPrint(ptarget) 
+{
+  var divToPrint=document.getElementById.ptarget;
+  newWin= window.open("");
+  newWin.document.write(divToPrint.outerHTML);
+  newWin.print();
+  newWin.close();
+}
+</script>
+
+</head>
+
+<body>
+
+
+Select Items to show on the map or click   
+<a href=# rel="nofollow" alt="Printer icon" title="Print map with current selections" onclick="iPrint(svgMap);"/>Print ME!</a><!-- check the css to see what actually prints! -->
+to print the current map.</p>
+<div name="svgOther" id="svgMap">
+
+This is stuff to print, using ID this time!
+
+</div>
+</body>
+</html>
