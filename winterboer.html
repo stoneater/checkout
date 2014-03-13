@@ -1,1 +1,52 @@
-winterboer.php
+<!DOCTYPE html>
+<html>
+<head>
+<title>Computer Checkout</title>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link href="css/south-street/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" >
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui-1.10.3.custom.js"></script>
+<script>
+$(function() {
+	$( "#accordion" ).accordion({ active: false, collapsible: true});
+});
+</script>
+</head>
+<body>
+ 
+<div id="accordion">
+  <h3>Checkout Computers</h3>
+  <div>
+   <iframe id="one"  name="one" src="reserve.html" width="500" height="700"></iframe>
+  </div>
+  <h3>Pick Sheet by Block</h3>
+  <div>
+   <iframe id="two" src="pickSheet.html" width="500" height="700"></iframe>
+  </div>
+  <h3>Master Locator.</h3>
+  <div>
+   <iframe id="three" src="masterLocator.html" width="800" height="1024"></iframe>
+  </div>
+  <h3>Toggle computers in/out of service.</h3>
+  <div>
+   <iframe id="four" src="service.php" width="500" height="700"></iframe>
+  </div>
+  <h3>Show future requests by room.</h3>
+  <div>
+  	<iframe id="five" src="roomLocator.html" width="800" height="1024"></iframe>
+	</div>
+	<h3>Show all requests for next two weeks.</h3>
+  <div>
+  	<iframe id="six" src="allLocator.html" width="800" height="1024"></iframe>
+	</div>
+	<h3>Show past requests by room.</h3>
+  <div>
+  	<iframe id="seven" src="pastLocator.html" width="800" height="1024"></iframe>
+	</div>
+	<h3>Delete a future request.</h3>
+  <div>
+  	<iframe id="eight" src="setupForDelete.php" width="800" height="1024"></iframe>
+	</div>

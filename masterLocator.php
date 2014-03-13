@@ -28,7 +28,11 @@ require_once 'dbclose.php';
 require_once 'end.php';
 $html=ob_get_contents();
 ob_end_clean();
-$mpdf->WriteHTML($html);
-$mpdf->Output();
+if ($outputType == "pdf") {
+	$mpdf->WriteHTML($html);
+	$mpdf->Output();
+} else {
+	echo $html;
+}
 exit;
 ?>

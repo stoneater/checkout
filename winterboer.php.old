@@ -34,8 +34,10 @@ function autoResize(id){
 		<li><a href="#tab2">Pick list by room</a></li>
 		<li><a href="#tab3">Master locator</a></li>
 		<li><a href="#tab4">Service Toggle</a></li>
-		<li><a href="#tab5">Room Information</a></li>
-		<li><a href="#tab6">Delete Request</a><li>
+		<li><a href="#tab5">Future requests by room</a></li>
+		<li><a href="#tab6">All future requests</a></li>
+		<li><a href="#tab7">Past requests by room</a></li>
+		<li><a href="#tab8">Delete Request</a><li>
 	</ul>
 
 	<div id="tab1">
@@ -53,8 +55,14 @@ function autoResize(id){
 	<div id="tab5">
 		<iframe id="five" src="roomLocator.html" width="800" height="1024"></iframe>
 	</div>
-	<div id="tab6">
-		<iframe id="six" src="setupForDelete.php" width="800" height="1024"></iframe>
+	<div id="tab5">
+		<iframe id="six" src="allLocator.html" width="800" height="1024"></iframe>
+	</div>
+	<div id="tab7">
+		<iframe id="seven" src="pastLocator.html" width="800" height="1024"></iframe>
+	</div>
+	<div id="tab8">
+		<iframe id="eight" src="setupForDelete.php" width="800" height="1024"></iframe>
 	</div>
 </div>
 </body>

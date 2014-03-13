@@ -13,11 +13,19 @@
 <body>
 <div id="tabs">
 	<ul>
-		<li><a href="#tab1">Mistakes have been made!</a></li>
+		<li><a href="#tab1">Checkout computers</a></li>
+		<li><a href="#tab2">Show future reservations by room</a></li>
+		<li><a href="#tab3">Show past reservations by room</a></li>
 	</ul>
 
 	<div id="tab1">
-		You have entered this site by mistake. This is ok, we all make mistakes. If you are coming near here on purpose, please check with the High School's Library/Media Specialist to learn just how badly you are mistaken.<br> Thank you.
+		<iframe id="one"  name="one" src="reserve.html" width="500" height="700"></iframe>
+	</div>
+	<div id="tab2">
+		<iframe id="two" src="roomLocator.html" width="500" height="700"></iframe>
+	</div>
+	<div id="tab3">
+		<iframe id="three" src="pastLocator.html" width="500" height="700"></iframe>
 	</div>
 </div>
 </body>
@@ -26,4 +34,4 @@
 //$('#tabs').tabs();
 $("#tabs").tabs({selected:0});
 </script>
-</html>
+]</html>

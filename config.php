@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Linux Powered Checkout system</title>
-<link rel="SHORTCUT ICON" href="favicon.ico">
-<meta charset="UTF-8">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link href="css/south-street/jquery-ui-1.10.3.custom.css" rel="stylesheet">
-<link rel="stylesheet" href="css/print.css" >
-<script src="js/jquery-1.9.1.js"></script>
-<script src="js/jquery-ui-1.10.3.custom.js"></script>
-
+	<title>Linux Powered Checkout system</title>
+	<link rel="SHORTCUT ICON" href="favicon.ico">
+	<meta charset="UTF-8">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link href="css/south-street/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/print.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/jquery-ui-1.10.3.custom.js"></script>
 </head>
+
 <body>
 <?php
 
@@ -32,6 +33,9 @@ $type=4;
 //set to True to turn on all debug commands, and False for normal operation.
 $debug = False;
 //$debug = True;
+
+//$outputType = "pdf";
+$outputType = "html";
 
 //set all variables without needing get or post
 //has benefit of listing all global variables!

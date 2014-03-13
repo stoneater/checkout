@@ -8,9 +8,27 @@ require_once 'dbopen.php';
 if ($_POST['block']) $block = $_POST['block'];
 if ($_POST['day']) $day = date('Y-m-d', strtotime($_POST['day']));
 
+//setup day for printout
+
+switch ($block) {
+	case 1:
+		$period = "1st/5th";
+		break;
+	case 2:
+		$period = "2nd/6th";
+		break;
+	case 3:
+		$period = "3rd/7th";
+		break;
+	case 4:
+		$period = "4th/7th";
+		break;
+}
+
 if ($debug){
 	echo "day is <b>$day </b><br>";
 	echo "Block requested: <b>".$block."</b><br>";
+	echo "Period shown: <b>".$period."</b><br>";
 }
 $theEnd=0; //set to find last iteration later
 
@@ -27,7 +45,7 @@ if(mysqli_num_rows($result) > 0) {
 			if($debug) echo "subquery is:<b> ".$subQuery. "</b><br>";
 			$subResult = mysqli_query($mysqli, $subQuery); 
 				while ($innerRow= mysqli_fetch_array($subResult,MYSQLI_NUM)) {
-					echo "Teacher's Name: ".$innerRow[0].", Room number: ".$innerRow[2].", On ".date('d-M-Y', strtotime($day))."<br>";
+					echo "On ".date('d-M-Y', strtotime($day)).", during the ".$period." block, deliver to  ".$innerRow[0]." in Room number: ".$innerRow[2].",  these computers: <br><br>";
 					} 
 		}
 		$subSubQuery = "Select day, asset, block".$block." from reserved where block".$block." like ".$value;
@@ -58,8 +76,11 @@ require_once 'dbclose.php';
 require_once 'end.php';
 $html=ob_get_contents();
 ob_end_clean();
-$mpdf->WriteHTML($html);
-$mpdf->Output();
-//echo $html;
+if ($outputType == "pdf") {
+	$mpdf->WriteHTML($html);
+	$mpdf->Output();
+} else {
+	echo $html;
+}
 exit;
 ?>
