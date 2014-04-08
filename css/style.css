@@ -37,4 +37,7 @@ div.pick
 	border-color:#888888;
 	box-shadow:2px 2px 1px #888888;
 }
-
+table,tr,td
+{
+	padding:5px;
+}

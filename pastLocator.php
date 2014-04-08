@@ -30,7 +30,7 @@ if(mysqli_num_rows($result) > 0) {
 		echo "<tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td><td>$row[3]</td><td>";
 	}
 } else {
-	echo "<h1>No computers are checked out in location ".$location." for the next two weeks.</h1>";
+	echo "<h1>No computers were checked out in location ".$location.".</h1>";
 }
 echo "</table></div>";
 require_once 'dbclose.php';
